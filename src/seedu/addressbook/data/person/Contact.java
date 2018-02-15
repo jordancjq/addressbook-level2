@@ -5,7 +5,8 @@ public class Contact {
     protected String value;
     protected boolean isPrivate;
 
-    public Contact() {
+    public Contact(boolean isPrivate) {
+        this.isPrivate = isPrivate;
     }
 
     @Override
