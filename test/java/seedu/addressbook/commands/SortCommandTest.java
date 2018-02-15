@@ -2,25 +2,20 @@ package seedu.addressbook.commands;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.AddressBook;
-import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.Address;
 import seedu.addressbook.data.person.Email;
 import seedu.addressbook.data.person.Name;
 import seedu.addressbook.data.person.Person;
 import seedu.addressbook.data.person.Phone;
 import seedu.addressbook.data.person.ReadOnlyPerson;
-import seedu.addressbook.data.person.UniquePersonList.PersonNotFoundException;
 import seedu.addressbook.data.tag.UniqueTagList;
-import seedu.addressbook.ui.TextUi;
 import seedu.addressbook.util.TestUtil;
 
 public class SortCommandTest {
@@ -45,7 +40,7 @@ public class SortCommandTest {
     }
 
     @Test
-    public void execute() throws IllegalValueException {
+    public void execute() {
         assertSortingSuccessful(unsortedAddressBook, Collections.emptyList());
     }
 
@@ -76,8 +71,6 @@ public class SortCommandTest {
      * Asserts that the address book has been successfully sorted.
      *
      * The addressBook passed in will not be modified (no side effects).
-     *
-     * @throws PersonNotFoundException if the selected person is not in the address book
      */
     private void assertSortingSuccessful(AddressBook addressBook, List<ReadOnlyPerson> displayList) {
 
