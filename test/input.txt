@@ -55,6 +55,27 @@
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
 
 ##########################################################
+# test sort persons command
+##########################################################
+
+  # should not have changes, persons already in sorted order
+  sort
+
+  # addtional test person for sorting
+  add Abe Gail p/888999 e/abegail@gmail.com a/123, Fahfah
+  list
+  add Corfey Lim p/577388 e/kpo@test.io a/666, Hell
+  list
+
+  # should sort by alphabetical order
+  sort
+
+  # should sort based on full name, if first name is identical
+  add Adam Lim p/7482810 e/lAdam@u.nus a/643, Tigu Lane
+  list
+  sort
+
+##########################################################
 # test view/viewall persons command
 ##########################################################
 
